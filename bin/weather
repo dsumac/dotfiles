@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# TODO: 
+# - print usage
+# - options to oneline & others
+# - options for date
+
+curl wttr.in/$1
