@@ -14,6 +14,7 @@ alias po='popd'
 
 # editors
 alias vi=vim
+alias v=vim
 
 # diff tools
 alias diff=colordiff
