@@ -84,7 +84,8 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 
 # PATH
-export PATH=~/.local/bin:$PATH
+BIN_PATH=~/dotfiles/bin
+export PATH=~/.local/bin:$BIN_PATH:$PATH
 
 # Splash login screen
 ~/dotfiles/bin/unix
@@ -93,3 +94,4 @@ echo "Welcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`"
 
 # aliases
 source ~/dotfiles/aliases/aliases
+
