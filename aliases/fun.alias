@@ -1,2 +1,2 @@
 # cowsay
-alias dragon="cowsay -f dragon"
+alias dragon="cowsay -f dragon | lolcat"
