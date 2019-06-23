@@ -2,11 +2,6 @@
 alias al=alias
 alias ual=unalias
 
-# ls
-alias ldir='ls -d */'
-alias ld=ldir
-
-
 # dirs
 alias d='dirs -lv'
 alias pu='pushd'

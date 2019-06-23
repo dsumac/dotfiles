@@ -1,0 +1,6 @@
+# ls command aliases
+
+alias l="ls -lhA"
+alias la="ls -lha"
+alias ldir='ls -d */'
+alias ld=ldir
