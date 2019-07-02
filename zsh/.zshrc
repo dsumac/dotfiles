@@ -95,3 +95,5 @@ echo "Welcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`"
 # aliases
 source ~/dotfiles/aliases/aliases
 
+# env 
+source ~/dotfiles/env/env
