@@ -1,12 +1,22 @@
-#!/usr/bin/sh
+#!/bin/zsh
 
 INSTALL_DIR=~/dotfiles
 
-cleanInstall() {
-  echo "Removing current dotfiles dir"
-  rm -rf $INSTALL_DIR
+promptClean() {
+  read -k 1 "answer?Are you sure to remove dotfiles ?"
+  if ! [[ "$answer" =~ [yY] ]]; then
+     exit 0
+  fi
+  echo "test"
 }
 
+cleanInstall() {
+  echo "Removing current dotfiles"
+  rm -rf $INSTALL_DIR
+  echo "Current dotfiles removed"
+}
+
+promptClean
 #cleanInstall
 # download and execute this script
 # stow conf directories
