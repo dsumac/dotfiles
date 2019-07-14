@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Urls of public ip testing service
+#ifconfig.me
+#icanhazip.com
+#ipecho.net/plain
+#bot.whatismyipaddress.com
+#checkip.amazonaws.com
+#ident.me
+
+url=https://diagnostic.opendns.com/myip
+
+curl $url
+
