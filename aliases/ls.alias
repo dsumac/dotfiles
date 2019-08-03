@@ -2,5 +2,5 @@
 
 alias l="ls -lhA"
 alias la="ls -lha"
-alias ldir='ls -d */'
-alias ld=ldir
+alias ldir="ls -d */"
+alias ld="ls -d */"
