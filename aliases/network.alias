@@ -1,0 +1,1 @@
+alias gateway="ip route | grep default | cut -d' ' -f3"
