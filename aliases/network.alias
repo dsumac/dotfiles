@@ -1,1 +1,7 @@
 alias gateway="ip route | grep default | cut -d' ' -f3"
+
+# Alias to change host
+# It require two files: /etc/hosts.perso (for all rules) and /etc/hosts.minimal (to test or other)
+# TODO: maybe a function ?
+alias setPersoHosts="sudo ln -sf /etc/hosts.perso /etc/hosts"
+alias setMinimalHosts="sudo ln -sf /etc/hosts.minimal /etc/hosts"
