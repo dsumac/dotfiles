@@ -77,9 +77,6 @@ source $ZSH/oh-my-zsh.sh
 ## PERSO
 #######################################################
 
-# LANG
-export LANG=en_US.UTF-8
-
 # EDITOR
 export EDITOR='vim'
 
