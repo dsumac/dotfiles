@@ -1,0 +1,3 @@
+#!/bin/sh
+
+mmdblookup --file /usr/share/GeoIP/GeoLite2-City.mmdb --ip $1
