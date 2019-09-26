@@ -7,8 +7,9 @@
 #bot.whatismyipaddress.com
 #checkip.amazonaws.com
 #ident.me
+#https://diagnostic.opendns.com/myip
 
-url=https://diagnostic.opendns.com/myip
+url=https://ifconfig.me
 
-curl $url
+curl $url; echo
 
