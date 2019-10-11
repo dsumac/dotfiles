@@ -20,3 +20,6 @@ alias difr='diff -r'
 
 # file space
 alias dus='du -hs * | sort -hr'
+
+# count files
+alias countf='find . -type f | wc -l'
