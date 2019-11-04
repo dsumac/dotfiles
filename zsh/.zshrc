@@ -99,6 +99,7 @@ source ~/dotfiles/env/env
 # if you want add special compagny config for example
 EXTERNAL_CONF_FILE=~/dotfiles/zsh/.zshrc.external
 if [ -f "$EXTERNAL_CONF_FILE" ]; then
-    echo "source external config file $EXERNAL_CONF_FILE"
+    echo "External config file found"
+    echo " => Source file: $EXTERNAL_CONF_FILE"
     source $EXTERNAL_CONF_FILE;
 fi
