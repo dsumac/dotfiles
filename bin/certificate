@@ -1,9 +1,9 @@
 #!/bin/sh
 
-function usage(){
+usage(){
 	echo "certificate SERVERNAME SERVER:PORT"
 	echo "example: certificate google.com google.com:443"
 }
 
-// TODO: display usage if params are not passed. Improve usage
-echo | openssl s_client -servername $1 -connect $2 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
+# TODO: display usage if params are not passed. Improve usage
+echo | openssl s_client -servername "$1" -connect "$2" | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
