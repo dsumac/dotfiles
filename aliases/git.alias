@@ -68,6 +68,10 @@ alias gf='git fetch'
 alias gfa='git fetch --all --prune'
 alias gfo='git fetch origin'
 
+# stash
+alias gsta='git stash'
+alias gstals='git stash list'
+
 # log
 alias glg='git log --stat'
 alias glgg='git log --graph'
