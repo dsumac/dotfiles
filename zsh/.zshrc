@@ -103,3 +103,13 @@ if [ -f "$EXTERNAL_CONF_FILE" ]; then
     echo " => Source file: $EXTERNAL_CONF_FILE"
     source $EXTERNAL_CONF_FILE;
 fi
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/damien/projects/pmu/pmu-online-turf-lambda-edge/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/damien/projects/pmu/pmu-online-turf-lambda-edge/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/damien/projects/pmu/pmu-online-turf-lambda-edge/node_modules/tabtab/.completions/sls.zsh ]] && . /home/damien/projects/pmu/pmu-online-turf-lambda-edge/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/damien/projects/pmu/pmu-online-turf-lambda-edge/node_modules/tabtab/.completions/slss.zsh ]] && . /home/damien/projects/pmu/pmu-online-turf-lambda-edge/node_modules/tabtab/.completions/slss.zsh
