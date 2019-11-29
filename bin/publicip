@@ -11,5 +11,5 @@
 
 url=https://ifconfig.me
 
-curl $url; echo
+curl -s $url; echo
 
