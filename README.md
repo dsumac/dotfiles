@@ -6,6 +6,11 @@ My dotfiles config.
 
 TODO
 
+### Tmux
+This tmux config use [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
+You should [install](https://github.com/tmux-plugins/tpm#installation) it AND install plugins defined in config.
+
+
 ## Thanks
 
 I found inspiration in few projects:
