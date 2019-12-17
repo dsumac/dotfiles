@@ -1,3 +1,6 @@
+# prevent ssh use local default terminal and use xterm by default
+alias ssh="TERM=xterm ssh"
+
 alias gateway="ip route | grep default | cut -d' ' -f3"
 
 # Alias to change host
