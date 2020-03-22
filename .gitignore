@@ -1,2 +1,6 @@
 zsh/.zshrc.external
 *.log
+
+# local directory and files should not share
+# ex: specific company config
+*.local
