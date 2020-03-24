@@ -82,7 +82,9 @@ export EDITOR='vim'
 
 # PATH
 BIN_PATH=~/dotfiles/bin
-export PATH=~/.local/bin:$BIN_PATH:$PATH
+# unversionned config, for company ...
+BIN_LOCAL_PATH=~/dotfiles/.local/bin
+export PATH=~/.local/bin:$BIN_PATH:$BIN_LOCAL_PATH:$PATH
 
 # Splash login screen
 ~/dotfiles/bin/unix
