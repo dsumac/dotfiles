@@ -97,12 +97,12 @@ source ~/dotfiles/aliases/aliases
 # env 
 source ~/dotfiles/env/env
 
-# unversioned external config
+# unversioned local config
 # if you want add special compagny config for example
-EXTERNAL_CONF_FILE=~/dotfiles/zsh/.zshrc.external
-if [ -f "$EXTERNAL_CONF_FILE" ]; then
-    echo "External config file found"
-    echo " => Source file: $EXTERNAL_CONF_FILE"
-    source $EXTERNAL_CONF_FILE;
+ZSH_LOCAL_FILE=~/dotfiles/zsh/.zshrc.local
+if [ -f "$ZSH_LOCAL_FILE" ]; then
+    echo "Local config file found"
+    echo " => Source file: $ZSH_LOCAL_FILE"
+    source $ZSH_LOCAL_FILE;
 fi
 
