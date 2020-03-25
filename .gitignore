@@ -1,4 +1,3 @@
-zsh/.zshrc.external
 *.log
 
 # local directory and files should not share
