@@ -1,0 +1,4 @@
+# tar command aliases
+
+alias tarls="tar -tvf"
+alias tarlsz="tar -ztvf"
