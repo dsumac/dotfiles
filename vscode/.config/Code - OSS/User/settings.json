@@ -1,0 +1,9 @@
+{
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1500,
+    "workbench.preferredDarkColorTheme": "Red",
+    "workbench.colorTheme": "Default Light+"
+}
