@@ -71,6 +71,7 @@ alias gfo='git fetch origin'
 # stash
 alias gsta='git stash'
 alias gstals='git stash list'
+alias gstap='git stash pop'
 
 # log
 alias glg='git log --stat'
