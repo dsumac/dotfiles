@@ -5,3 +5,7 @@
 ### Linter
 - shellcheck: //github.com/koalaman/shellcheck
 
+## Diff
+
+- colordiff
+- meld
