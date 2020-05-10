@@ -17,7 +17,7 @@ This tmux config use [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
 
 - `aliases`: shell aliases
 - `bin`: some binaries (fun or not)
-- `doc`: some documentations
+- `docs`: some documentations
 - `env`: environment variables
 
 ## Thanks
