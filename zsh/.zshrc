@@ -78,9 +78,6 @@ source $ZSH/oh-my-zsh.sh
 ## PERSO
 #######################################################
 
-# EDITOR
-export EDITOR='vim'
-
 # PATH
 BIN_PATH=~/dotfiles/bin
 # unversionned config, for company ...
