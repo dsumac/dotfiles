@@ -91,4 +91,6 @@ alias glols='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %
 # prune
 alias gprut='git tag -l | xargs git tag -d && git fetch -t' 
 
+# repo size
+alias gsize='git count-objects -vH'
 
