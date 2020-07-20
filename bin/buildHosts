@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cat "$DOTFILES"/hosts/* >> /etc/hosts
