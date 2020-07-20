@@ -5,5 +5,13 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1500,
     "workbench.preferredDarkColorTheme": "Red",
-    "workbench.colorTheme": "Default Light+"
+    "workbench.colorTheme": "Default Light+",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "multiclip.formatAfterPaste": true,
+    "multiclip.bufferSize": 15,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
