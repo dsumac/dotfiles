@@ -1,4 +1,15 @@
 [user]
         name = dsumac
-        email = damien@sumac.fr
+	email = damien@sumac.fr
+[merge]
+	conflictstyle = diff3
 
+[mergetool "mymeld"]
+	cmd = $(which meld) --diff $LOCAL $MERGED $REMOTE --diff $BASE $LOCAL --diff $BASE $REMOTE
+
+[difftool "webstorm"]
+    cmd = $(which webstorm) diff $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\")
+  trustExitCode = true
+[mergetool "webstorm"]
+    cmd = $(which webstorm) merge $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\") $(cd $(dirname \"$BASE\") && pwd)/$(basename \"$BASE\") $(cd $(dirname \"$MERGED\") && pwd)/$(basename \"$MERGED\")
+    trustExitCode = true
