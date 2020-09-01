@@ -9,11 +9,13 @@ TODO
 - clone (or download) repository project
 - install zsh if it's not installed
 - install oh_my_zsh (TODO: remove this dependency)
-- install stow
-- modify your zsh config 
-- stow the wanted configs
 - install tmux
 - install tpm
+- install stow & stow the wanted configs
+  - stow zsh
+  - stow git
+  - stow tmux
+- modify your zsh config 
 
 TODO: make a script to install
 
