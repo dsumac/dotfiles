@@ -1,1 +1,3 @@
-for env (~/dotfiles/env/*.env) source $env
+for env ($DOTFILES/env/*.env) source $env
+
+source $DOTFILES/env/localEnvLoader

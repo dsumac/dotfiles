@@ -78,29 +78,17 @@ source $ZSH/oh-my-zsh.sh
 ## PERSO
 #######################################################
 
-# PATH
-BIN_PATH=~/dotfiles/bin
-# unversionned config, for company ...
-BIN_LOCAL_PATH=~/dotfiles/.local/bin
-export PATH=~/.local/bin:$BIN_PATH:$BIN_LOCAL_PATH:$PATH
-
-# Splash login screen
-~/dotfiles/bin/unix
-echo "\n"
-echo "Welcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`"
-
-# aliases
-source ~/dotfiles/aliases/aliases
-
-# env 
+# load env config
 source ~/dotfiles/env/env
 
-# unversioned local config
-# if you want add special compagny config for example
-ZSH_LOCAL_FILE=~/dotfiles/zsh/.zshrc.local
-if [ -f "$ZSH_LOCAL_FILE" ]; then
-    echo "Local config file found"
-    echo " => Source file: $ZSH_LOCAL_FILE"
-    source $ZSH_LOCAL_FILE;
-fi
+# aliases
+source $DOTFILES/aliases/aliases
+
+# Splash login screen
+$DOTFILES_BIN_PATH/unix
+echo -e "\nWelcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`\n"
+
+# PATH
+DOTFILES_BIN_PATH=$DOTFILES/bin
+export PATH=$BIN_LOCAL_PATH:$PATH
 
