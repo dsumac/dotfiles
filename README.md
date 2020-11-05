@@ -19,6 +19,19 @@ TODO
 
 TODO: make a script to install
 
+## Configuration
+
+There are some special directories.
+You must **not stow** theses directories / files.
+
+| Directory | Information |
+|-----------|-------------|
+| alias | some aliases. Add a file *.alias file and the aliases will be automatically taken into account. You can modify an existing file too  |
+| bin | binaries. Add binaries tools here |
+| docs | misc docs on tools & other |
+| env | Add a .env file and the env vars will be automatically taken into account  |
+
+
 ### zsh configuration
 
 <code>
