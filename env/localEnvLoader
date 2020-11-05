@@ -1,11 +1,8 @@
 #!/bin/bash
 
-# TODO: rework to make simple for ... withot expand via find
-ZSH_LOCAL_FILES=`find ${DOTFILES_LOCAL}/zsh/* -maxdepth 1 -type f`
-
 echo -e "---------- Load local config ----------\n"
 
-for f in $ZSH_LOCAL_FILES
+for f ($DOTFILES_LOCAL/zsh/*)
 do
   if [ -f "$f" ]; then
     echo "source zsh local file $f found"
