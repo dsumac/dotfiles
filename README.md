@@ -32,36 +32,6 @@ You must **not stow** theses directories / files.
 | env | Add a .env file and the env vars will be automatically taken into account  |
 
 
-### zsh configuration
-
-<code>
-# PATH
-BIN_PATH=~/dotfiles/bin
-# unversionned config, for company ...
-BIN_LOCAL_PATH=~/dotfiles/.local/bin
-export PATH=~/.local/bin:$BIN_PATH:$BIN_LOCAL_PATH:$PATH
-
-# Splash login screen
-~/dotfiles/bin/unix
-echo "\n"
-echo "Welcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`"
-
-# aliases
-source ~/dotfiles/aliases/aliases
-
-# env
-source ~/dotfiles/env/env
-
-# unversioned local config
-# if you want add special compagny config for example
-ZSH_LOCAL_FILE=~/dotfiles/zsh/.zshrc.pmu.local
-if [ -f "$ZSH_LOCAL_FILE" ]; then
-    echo "Local config file found"
-    echo " => Source file: $ZSH_LOCAL_FILE"
-    source $ZSH_LOCAL_FILE;
-fi
-</code>
-
 ### Tmux
 This tmux config use [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
 - [install tpm](https://github.com/tmux-plugins/tpm#installation)
