@@ -79,16 +79,18 @@ source $ZSH/oh-my-zsh.sh
 #######################################################
 
 # load env config
-source ~/dotfiles/env/env
+export DOTFILES=~/dotfiles
+export DOTFILES_LOCAL=$DOTFILES/.local
+export DOTFILES_BIN_PATH=$DOTFILES/bin
+source $DOTFILES/env/env
 
 # aliases
 source $DOTFILES/aliases/aliases
 
 # Splash login screen
-$DOTFILES_BIN_PATH/unix
+$DOTFILES/bin/unix
 echo -e "\nWelcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`\n"
 
 # PATH
-DOTFILES_BIN_PATH=$DOTFILES/bin
-export PATH=$BIN_LOCAL_PATH:$PATH
+export PATH=$DOTFILES/bin:$BIN_LOCAL_PATH:$PATH
 
