@@ -1,20 +1,31 @@
 #!/bin/bash
 
-echo -e "---------- Load local config ----------\n"
-
-for f ($DOTFILES_LOCAL/zsh/*)
-do
-  if [ -f "$f" ]; then
-    echo "source zsh local file $f found"
-    source $f
+addLocalBinDirToPath() {
+  LOCAL_BIN_DIR=$DOTFILES_LOCAL/bin
+  if [ -d $LOCAL_BIN_DIR ]; then
+    echo -e "\nAdd local bin dir $LOCAL_BIN_DIR in \$PATH"
+    export PATH=$LOCAL_BIN_DIR:$PATH
   fi
-done
+}
 
+if [ -d "$DOTFILES_LOCAL" ];
+  then
+    echo -e "---------- Local config LOAD ----------"
+    
+    for f ($DOTFILES_LOCAL/zsh/*)
+    do
+      if [ -f "$f" ]; then
+        echo -e "\nSource zsh local file $f found"
+        source $f
+      fi
+    done
 
-LOCAL_BIN_DIR=$DOTFILES_LOCAL/bin
-if [ -d $LOCAL_BIN_DIR ]; then
-  echo -e "\nAdd local bin dir $LOCAL_BIN_DIR in \$PATH"
-  export PATH=$LOCAL_BIN_DIR:$PATH
+    addLocalBinDirToPath
+
+    echo -e "---------- Local config LOADED ----------"
+  else
+    echo -e "---------- No local config found in \$DOTFILES_LOCAL ----------"
 fi
 
-echo -e "----------- \n"
+
+
