@@ -24,7 +24,7 @@ if [ -d "$DOTFILES_LOCAL" ];
 
     echo -e "---------- Local config LOADED ----------"
   else
-    echo -e "---------- No local config found in \$DOTFILES_LOCAL ----------"
+    echo -e "---------- No local config found in $DOTFILES_LOCAL ----------"
 fi
 
 
