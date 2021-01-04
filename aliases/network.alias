@@ -10,4 +10,5 @@ alias setPersoHosts="sudo ln -sf /etc/hosts.perso /etc/hosts"
 alias setMinimalHosts="sudo ln -sf /etc/hosts.minimal /etc/hosts"
 
 # Serve current directory in http
-alias httpServe="python -m SimpleHTTPServer"
+alias httpServeLegacy="python -m SimpleHTTPServer"
+alias httpServe="python -m http.server"
