@@ -22,10 +22,10 @@ You must **not stow** theses directories / files.
 
 | Directory | Information |
 |-----------|-------------|
-| `aliases` | some aliases. Add a file *.alias file and the aliases will be automatically taken into account. You can modify an existing file too  |
+| `aliases` | some aliases. Add a *.alias file and the aliases will be automatically added  |
 | `bin` | binaries. Add binaries tools here |
 | `docs` | misc docs on tools & other |
-| `env` | Add a .env file and the env vars will be automatically taken into account  |
+| `env` | Add a .env file and the env vars will be automatically added  |
 
 
 ### Tmux
