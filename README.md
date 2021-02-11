@@ -12,8 +12,10 @@ My dotfiles config.
 - install stow
 - stow the wanted configs
   - stow zsh
-  - stow git
   - stow tmux
+  - stow git
+  - stow terminator
+  - stow vscode
 
 ## Configuration
 
@@ -46,6 +48,7 @@ https://www.gnu.org/software/stow/
 
 ## TODO
 - make a script to install
+- make a script to build host file
 - prerequisite
 - list of software
 
