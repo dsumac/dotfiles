@@ -9,3 +9,7 @@
 
 - colordiff
 - meld
+
+## Networking
+
+- speedtest (cli): https://www.speedtest.net/apps/cli
