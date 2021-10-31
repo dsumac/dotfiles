@@ -16,6 +16,7 @@ My dotfiles config.
   - stow git
   - stow terminator
   - stow vscode
+  - stow cmus 
 - other (fun or not) tools:
   - cowsay
   - python for httpServe aliases 
