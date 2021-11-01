@@ -5,5 +5,15 @@ usage(){
 	echo "example: certificate google.com google.com:443"
 }
 
+server=$1
+uri=$2
+
+if [ -z "$server" ] || [ -z "$uri" ] ; then
+  echo -e "Error, parameters are incorrects\n"
+  usage
+  exit 1
+fi
+
+
 # TODO: display usage if params are not passed. Improve usage
-echo | openssl s_client -servername "$1" -connect "$2" | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
+echo | openssl s_client -servername "$server" -connect "$uri" | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
