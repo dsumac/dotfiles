@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# usage: translate <myApiKey> <text> <lang>
+
+apiKey=$1
+text=$2
+lang=${3:-FR}
+
+curl https://api-free.deepl.com/v2/translate --silent -d auth_key="$apiKey" -d "text=$text" -d "target_lang=$lang" | jq '.translations[].text'
+
