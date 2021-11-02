@@ -5,4 +5,7 @@
 # - options to oneline & others
 # - options for date
 
-curl "wttr.in/$1"
+place="$1"
+lang="${2:-en}"
+
+curl -H "Accept-Language: $lang" "wttr.in/$place"
