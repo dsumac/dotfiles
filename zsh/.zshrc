@@ -70,6 +70,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
   git
   yarn
+  httpie
 )
 
 source $ZSH/oh-my-zsh.sh
