@@ -1,5 +1,5 @@
 [user]
-        name = dsumac
+	name = dsumac
 	email = damien@sumac.fr
 [merge]
 	conflictstyle = diff3
