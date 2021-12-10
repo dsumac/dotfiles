@@ -21,3 +21,5 @@ alias difr='diff -r'
 # file space
 alias dus='du -hs * | sort -hr'
 
+# history
+alias please='sudo $(fc -ln -1)'
