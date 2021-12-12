@@ -23,3 +23,7 @@ alias dus='du -hs * | sort -hr'
 
 # history
 alias please='sudo $(fc -ln -1)'
+
+# cal
+alias cal='cal -m'
+alias calfr='LC_ALL=fr_FR.utf8 cal'
