@@ -1,0 +1,2 @@
+# calc
+alias bc="bc -lq"
