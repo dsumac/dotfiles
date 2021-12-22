@@ -4,13 +4,24 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 
 ## Shell
 
+### doc
+
+- tldr
+
 ### Linter
-- shellcheck: //github.com/koalaman/shellcheck
+- shellcheck: https://github.com/koalaman/shellcheck
+
+### search tools
+- ack: https://beyondgrep.com/
 
 ## Diff
 
 - colordiff
 - meld
+
+## Productivity
+
+- fzf: cmd fuzzy finder
 
 ## Networking
 
