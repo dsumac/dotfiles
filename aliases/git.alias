@@ -96,3 +96,4 @@ alias gsize='git count-objects -vH'
 
 # push
 alias gpf='git push --force-with-lease'
+alias ggpushf='ggpush --force-with-lease'
