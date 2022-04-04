@@ -14,8 +14,20 @@ filetype indent on
 " Turn syntax highlighting on.
 syntax on
 
+" highlight search
+set hlsearch
+
 " case insensitive search
 set ignorecase
 set smartcase
 set infercase
+
+" Add numbers to each line on the left-hand side.
+set number
+
+" Highlight cursor line underneath the cursor horizontally.
+"set cursorline
+
+" Highlight cursor line underneath the cursor vertically.
+"set cursorcolumn
 
