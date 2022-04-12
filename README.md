@@ -13,6 +13,7 @@ My dotfiles config.
 - stow the wanted configs
   - stow zsh
   - stow tmux
+  - stow vim
   - stow git
   - stow terminator
   - stow vscode
@@ -20,6 +21,8 @@ My dotfiles config.
 - other (fun or not) tools:
   - cowsay
   - python for httpServe aliases 
+
+- create $HOME/projects dir if it does not exist
 
 ## Configuration
 
