@@ -100,5 +100,7 @@ $DOTFILES/bin/unix
 echo -e "\nWelcome at home $USERNAME, we are: `date +'%d/%m/%Y %T'`\n"
 
 # PATH
-export PATH=$DOTFILES/bin:$BIN_LOCAL_PATH:$PATH
+export PATH=$DOTFILES/bin:$PATH
+
+
 
