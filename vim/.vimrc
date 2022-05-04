@@ -1,6 +1,7 @@
-
+" You don't need set nocompatible !
+" https://www.reddit.com/r/vim/wiki/vimrctips#wiki_you_don.27t_need_set_nocompatible
 " Disable compatibility with vi which can cause unexpected issues.
-set nocompatible
+" set nocompatible
 
 " Enable type file detection. Vim will be able to try to detect the type of file in use.
 filetype on
