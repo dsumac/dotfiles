@@ -6,6 +6,7 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 
 ### doc
 
+- [pandoc, document converter](https://pandoc.org/)
 - tldr
 
 ### Linter
