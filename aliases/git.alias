@@ -44,7 +44,8 @@ alias gcsm='git commit -s -m'
 # checkout
 alias gcb='git checkout -b'
 alias gcd='git checkout develop'
-alias gcm='git checkout master'
+alias gcmaster='git checkout master'
+alias gcm='git checkout main'
 alias gco='git checkout'
 
 # clone
