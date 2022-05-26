@@ -35,6 +35,7 @@ You must **not stow** theses directories / files.
 | `bin` | binaries. Add binaries tools here |
 | `docs` | misc docs on tools & other |
 | `env` | Add a .env file and the env vars will be automatically added  |
+| `install` | All tooling about installation |
 
 
 ### Tmux
