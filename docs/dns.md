@@ -8,7 +8,7 @@
   - https://www.fdn.fr/
 - Quad9, dns which block threats:
   - 9.9.9.9
-  - https://www.quad9.net/ 
+  - https://www.quad9.net/
 - OSRN:
   - 188.165.175.115 (fr)
   - 37.187.23.23 (fr)
@@ -16,6 +16,5 @@
   - 178.209.50.232 (ch)
   - more information: https://en.wikipedia.org/wiki/Open_Root_Server_Network
 - OpenNIC:
-  - https://servers.opennic.org/ 
+  - https://servers.opennic.org/
   - https://www.opennic.org/
-

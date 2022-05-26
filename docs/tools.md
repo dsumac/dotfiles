@@ -10,9 +10,11 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 - tldr
 
 ### Linter
+
 - shellcheck: https://github.com/koalaman/shellcheck
 
 ### search tools
+
 - ack: https://beyondgrep.com/
 
 ## Diff
