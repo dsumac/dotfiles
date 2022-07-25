@@ -22,6 +22,8 @@ My dotfiles config.
   - stow terminator
   - stow vscode
   - stow cmus
+  - stow newsboat config
+    `stow -t ~/.newsboat newsboat`
 - other (fun or not) tools:
 
   - cowsay

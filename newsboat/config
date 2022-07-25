@@ -1,0 +1,6 @@
+auto-reload         yes
+browser             "firefox %u"
+confirm-exit        no
+max-items           100
+reload-threads      3
+save-path           ~/.newsboat/saved_articles
