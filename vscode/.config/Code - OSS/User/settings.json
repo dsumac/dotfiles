@@ -1,20 +1,20 @@
 {
-    "window.zoomLevel": 1,
-    "editor.renderWhitespace": "all",
-    "editor.renderControlCharacters": true,
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1500,
-    "workbench.preferredDarkColorTheme": "Red",
-    "workbench.colorTheme": "Default Light+",
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "multiclip.formatAfterPaste": true,
-    "multiclip.bufferSize": 15,
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "window.zoomLevel": 1,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "workbench.preferredDarkColorTheme": "Red",
+  "workbench.colorTheme": "Default Light+",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "multiclip.formatAfterPaste": true,
+  "multiclip.bufferSize": 15,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
