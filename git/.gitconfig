@@ -3,6 +3,8 @@
 	email = damien@sumac.fr
 [merge]
 	conflictstyle = diff3
+[rebase]
+	autosquash = true
 
 [mergetool "mymeld"]
 	cmd = $(which meld) --diff $LOCAL $MERGED $REMOTE --diff $BASE $LOCAL --diff $BASE $REMOTE
