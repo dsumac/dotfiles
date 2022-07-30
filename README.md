@@ -4,16 +4,20 @@ My dotfiles config.
 
 ## Installation
 
-- clone (or download) repository project
+- clone (or download) repository project in home directory
 - install zsh (if it's not installed)
 - install oh_my_zsh (TODO: remove this dependency)
 - install tmux
-- install tpm
+  - [install tpm](https://github.com/tmux-plugins/tpm#installation)
+  - [install tmux plugins](https://github.com/tmux-plugins/tpm#installing-plugins)
 - install stow
 - stow the wanted configs
   - stow zsh
+    - `stow -t ~ zsh`
   - stow tmux
+    - `stow -t ~ tmux`
   - stow vim
+    - `stow -t ~ vim`
   - stow git
   - stow terminator
   - stow vscode
