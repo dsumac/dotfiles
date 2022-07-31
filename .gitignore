@@ -1,5 +1,9 @@
 *.log
+.history
 
 # local directory and files should not share
 # ex: specific company config
 *.local
+
+# IDE
+.idea
