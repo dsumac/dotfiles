@@ -48,6 +48,12 @@ alias gcmaster='git checkout master'
 alias gcm='git checkout main'
 alias gco='git checkout'
 
+# switch
+gsw='git switch'
+gswc='git switch -c'
+gswm='git switch main'
+gswmaster='git switch master'
+
 # clone
 alias gcl='git clone --recurse-submodules'
 
