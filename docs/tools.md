@@ -1,8 +1,12 @@
-# List of tools / soft
+# List of my used tools / soft
 
 Note: when "required" is mentionned, this means dotfiles use the tool
 
-## Shell
+## Shell, command line
+
+### Terminal mutliplexer
+
+- tmux
 
 ### doc
 
@@ -12,6 +16,10 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 ### Linter
 
 - shellcheck: https://github.com/koalaman/shellcheck
+
+### File viewer
+
+- bat
 
 ### search tools
 
@@ -26,6 +34,10 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 
 - fzf: cmd fuzzy finder
 
+## Rss reader
+
+- newsboat
+
 ## Networking
 
 - speedtest (cli): https://www.speedtest.net/apps/cli
@@ -39,3 +51,7 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 ## system
 
 - htop
+
+## Specific tools
+
+- [k9s](https://k9scli.io/): Kubernetes CLI to manage clusters
