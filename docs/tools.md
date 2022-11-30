@@ -51,6 +51,7 @@ Note: when "required" is mentionned, this means dotfiles use the tool
 ## system
 
 - htop
+- [lazydocker](https://github.com/jesseduffield/lazydocker)
 
 ## Specific tools
 
