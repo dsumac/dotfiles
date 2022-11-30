@@ -1,3 +1,5 @@
+# general
+*.swp
 *.log
 .history
 
