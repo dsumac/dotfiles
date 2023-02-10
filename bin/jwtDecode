@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+# thanks to https://jwt-decoder.com/snippets/decode-jwt-bash-jq
+jq -R 'split(".") | .[1] | @base64d | fromjson' <<< "$1"
+
