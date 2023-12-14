@@ -18,3 +18,7 @@
 - OpenNIC:
   - https://servers.opennic.org/
   - https://www.opennic.org/
+- Cloudflare
+  - https://www.cloudflare.com/learning/dns/what-is-1.1.1.1/
+  - https://developers.cloudflare.com/1.1.1.1/ip-addresses/
+    - 1.1.1.1
