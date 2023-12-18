@@ -106,5 +106,8 @@ alias gsize='git count-objects -vH'
 alias gpf='git push --force-with-lease'
 alias ggpushf='ggpush --force-with-lease'
 
+# changelog
+alias gchgl='git log --oneline --no-decorate --no-color --merges'
+
 # Composed
 alias gfixup="git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
