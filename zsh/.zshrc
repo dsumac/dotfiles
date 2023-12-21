@@ -71,6 +71,7 @@ plugins=(
   git
   yarn
   httpie
+  gh
 )
 
 source $ZSH/oh-my-zsh.sh
