@@ -1,0 +1,5 @@
+# bat command aliases
+
+## like `bat -p`
+alias batp="bat --style=plain --pager=never"
+
