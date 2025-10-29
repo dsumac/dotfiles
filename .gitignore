@@ -2,6 +2,7 @@
 *.swp
 *.log
 .history
+.DS_Store
 
 # local directory and files should not share
 # ex: specific company config
