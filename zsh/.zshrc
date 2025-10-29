@@ -68,6 +68,7 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  aliases
   git
   yarn
   httpie
@@ -82,6 +83,7 @@ case "$(uname -s)" in
      eval "$(/opt/homebrew/bin/brew shellenv)"
      ;;
 esac
+
 
 ########################################################
 ## PERSO
