@@ -1,58 +1,80 @@
-# List of my used tools / soft
+# Tools
 
-Note: when "required" is mentionned, this means dotfiles use the tool
+List of tools used with these dotfiles. Items marked **required** are expected by the config.
 
-## Shell, command line
+## Shell
 
-### Terminal mutliplexer
+### Terminal multiplexer
 
-- tmux
+- **[tmux](https://github.com/tmux/tmux)** — required
 
-### doc
+### Zsh framework
 
-- [pandoc, document converter](https://pandoc.org/)
-- tldr
+- **[oh-my-zsh](https://ohmyz.sh/)** — required
 
-### Linter
+## File viewing & search
 
-- shellcheck: https://github.com/koalaman/shellcheck
-
-### File viewer
-
-- bat
-
-### search tools
-
-- ack: https://beyondgrep.com/
+| Tool | Description |
+| ---- | ----------- |
+| **[bat](https://github.com/sharkdp/bat)** | `cat` with syntax highlighting — required |
+| [ack](https://beyondgrep.com/) | `grep`-like text search tool |
+| [fzf](https://github.com/junegunn/fzf) | Fuzzy finder for the command line |
 
 ## Diff
 
-- colordiff
-- meld
+| Tool | Description |
+| ---- | ----------- |
+| [colordiff](https://www.colordiff.org/) | Colorized `diff` output |
+| [meld](https://meldmerge.org/) | Visual diff and merge tool |
+
+## Documentation
+
+| Tool | Description |
+| ---- | ----------- |
+| [tldr](https://tldr.sh/) | Simplified man pages |
+| [pandoc](https://pandoc.org/) | Universal document converter |
+
+## Linting
+
+| Tool | Description |
+| ---- | ----------- |
+| [shellcheck](https://github.com/koalaman/shellcheck) | Shell script static analysis |
 
 ## Productivity
 
-- fzf: cmd fuzzy finder
+| Tool | Description |
+| ---- | ----------- |
+| [fzf](https://github.com/junegunn/fzf) | Fuzzy finder (also used in git aliases) |
 
-## Rss reader
+## RSS
 
-- newsboat
+| Tool | Description |
+| ---- | ----------- |
+| [newsboat](https://newsboat.org/) | Terminal RSS/Atom feed reader |
 
 ## Networking
 
-- speedtest (cli): https://www.speedtest.net/apps/cli
+| Tool | Description |
+| ---- | ----------- |
+| [speedtest-cli](https://www.speedtest.net/apps/cli) | Internet speed test from the terminal |
 
-## Command line parser
+## Data parsing
 
-- jq: json
-- htmlq: html
-  - https://github.com/mgdm/htmlq
+| Tool | Description |
+| ---- | ----------- |
+| [jq](https://stedolan.github.io/jq/) | JSON processor — required (`jwtDecode` script) |
+| [htmlq](https://github.com/mgdm/htmlq) | HTML processor (like `jq` for HTML) |
 
-## system
+## System
 
-- htop
-- [lazydocker](https://github.com/jesseduffield/lazydocker)
+| Tool | Description |
+| ---- | ----------- |
+| [htop](https://htop.dev/) | Interactive process viewer |
+| [lazydocker](https://github.com/jesseduffield/lazydocker) | Terminal UI for Docker |
 
-## Specific tools
+## Kubernetes
 
-- [k9s](https://k9scli.io/): Kubernetes CLI to manage clusters
+| Tool | Description |
+| ---- | ----------- |
+| [k9s](https://k9scli.io/) | Terminal UI to manage Kubernetes clusters |
+

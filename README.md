@@ -1,74 +1,119 @@
 # dsumac dotfiles
 
-My dotfiles config.
+Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
+
+## Prerequisites
+
+- [zsh](https://www.zsh.org/)
+- [oh-my-zsh](https://ohmyz.sh/)
+- [GNU Stow](https://www.gnu.org/software/stow/)
+- [tmux](https://github.com/tmux/tmux)
+    - [tpm](https://github.com/tmux-plugins/tpm)
+- `cowsay`, `python3` (for `httpServe` alias)
 
 ## Installation
 
-- clone (or download) repository project in home directory
-- install zsh (if it's not installed)
-- install oh_my_zsh (TODO: remove this dependency)
-- install tmux
-  - [install tpm](https://github.com/tmux-plugins/tpm#installation)
-  - [install tmux plugins](https://github.com/tmux-plugins/tpm#installing-plugins)
-- install stow
-- stow the wanted configs
-  - stow zsh
-    - `stow -t ~ zsh`
-  - stow tmux
-    - `stow -t ~ tmux`
-  - stow vim
-    - `stow -t ~ vim`
-  - stow git
-  - stow vscode
-  - stow cmus
-  - stow newsboat config
-    `stow -t ~/.newsboat newsboat`
-- other (fun or not) tools:
+```sh
+git clone https://github.com/dsumac/dotfiles ~/dotfiles
+cd ~/dotfiles
+```
 
-  - cowsay
-  - python for httpServe aliases
+Then stow the configs you want:
 
-- create $HOME/projects dir if it does not exist
+```sh
+stow zsh
+stow tmux
+stow vim
+stow git
+stow vscode
+stow cmus
+stow -t ~/.newsboat newsboat
+```
+
+Finally, create the projects directory if it does not exist:
+
+```sh
+mkdir -p ~/projects
+```
+
+## Repository structure
+
+```
+dotfiles/
+├── aliases/       # Shell aliases, auto-loaded (*.alias files)
+├── bin/           # Custom scripts, added to $PATH automatically
+├── cmus/          # cmus music player config (stow)
+├── cowsay/        # Custom cowsay cows
+├── docs/          # Reference documentation
+├── env/           # Environment variables, auto-loaded (*.env files)
+├── git/           # Git config (stow)
+├── newsboat/      # Newsboat RSS reader config (stow)
+├── tmux/          # Tmux config (stow)
+├── vim/           # Vim config (stow)
+├── vscode/        # VSCode settings (stow)
+└── zsh/           # Zsh config (stow)
+```
 
 ## Configuration
 
-There are some **special directories.**
-You must **not stow** theses directories / files.
+### Special directories
 
-| Directory | Information                                                                   |
-| --------- | ----------------------------------------------------------------------------- |
-| `aliases` | some aliases. Add a \*.alias file and the aliases will be automatically added |
-| `bin`     | binaries. Add binaries tools here                                             |
-| `docs`    | misc docs on tools & other                                                    |
-| `env`     | Add a .env file and the env vars will be automatically added                  |
-| `install` | All tooling about installation                                                |
+These directories are **not stowed** — they are loaded automatically by the shell.
+
+| Directory | Description                                             |
+| --------- | ------------------------------------------------------- |
+| `aliases` | Add a `*.alias` file and it will be sourced at startup  |
+| `bin`     | Add scripts here — the directory is on `$PATH`          |
+| `docs`    | Reference documentation (DNS, shell shortcuts, tools)   |
+| `env`     | Add a `*.env` file and it will be sourced at startup    |
+
+### Local / machine-specific config
+
+Machine-specific settings that should not be committed go in `~/.dotfiles/.local/`:
+
+```
+.local/
+├── zsh/       # Any *.zsh file here is sourced at startup
+└── bin/       # Local scripts added to $PATH
+```
+
+Create the directory if it does not exist:
+
+```sh
+mkdir -p ~/dotfiles/.local/zsh
+mkdir -p ~/dotfiles/.local/bin
+```
 
 ### Tmux
 
-This tmux config use [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm).
+This config uses [Tmux Plugin Manager (tpm)](https://github.com/tmux-plugins/tpm).
 
-- [install tpm](https://github.com/tmux-plugins/tpm#installation)
-- [install plugins](https://github.com/tmux-plugins/tpm#installing-plugins) defined in config.
+1. [Install tpm](https://github.com/tmux-plugins/tpm#installation)
+2. [Install plugins](https://github.com/tmux-plugins/tpm#installing-plugins) defined in `.tmux.conf`
+
+### Custom scripts (`bin/`)
+
+| Script        | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| `battery`     | Show battery state and percentage                    |
+| `buildHosts`  | Build `/etc/hosts` file                              |
+| `certificate` | Inspect TLS certificates                             |
+| `countf`      | Count files in a directory                           |
+| `jwtDecode`   | Decode a JWT token (requires `jq`)                   |
+| `locateip`    | Geolocate an IP address                              |
+| `publicip`    | Print your public IP address                         |
+| `translate`   | Translate text via API                               |
+| `unix`        | Display a splash/login screen                        |
+| `weather`     | Show current weather                                 |
+| `whereami`    | Geolocate your current public IP                     |
 
 ## Thanks
 
-I found inspiration in few projects:
+Inspiration from:
 
-- xero dotfiles:
-  https://github.com/xero/dotfiles
-
-- gnu stow:
-  https://www.gnu.org/software/stow/
-
-## TODO
-
-- make a script to install
-- make a script to build host file
-- prerequisite
-- list of software
+- [xero/dotfiles](https://github.com/xero/dotfiles)
+- [GNU Stow](https://www.gnu.org/software/stow/)
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) dsumac
+[MIT](http://opensource.org/licenses/MIT) — Copyright (c) dsumac
