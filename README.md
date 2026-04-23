@@ -19,7 +19,6 @@ My dotfiles config.
   - stow vim
     - `stow -t ~ vim`
   - stow git
-  - stow terminator
   - stow vscode
   - stow cmus
   - stow newsboat config
