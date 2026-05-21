@@ -29,3 +29,5 @@
 [rebase]
 	autosquash = true
 
+[rerere]
+	enabled = true
