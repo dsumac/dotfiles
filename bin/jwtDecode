@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
 # thanks to https://jwt-decoder.com/snippets/decode-jwt-bash-jq
-jq -R 'split(".") | .[1] | @base64d | fromjson' <<< "$1"
+if [ "$#" -lt 1 ]; then
+  printf 'Usage: %s <jwt>\n' "$0" >&2
+  exit 1
+fi
+
+printf '%s\n' "$1" | jq -R 'split(".") | .[1] | @base64d | fromjson'
 
