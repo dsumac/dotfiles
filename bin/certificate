@@ -9,7 +9,7 @@ server=$1
 uri=$2
 
 if [ -z "$server" ] || [ -z "$uri" ] ; then
-  echo -e "Error, parameters are incorrects\n"
+  printf "Error, parameters are incorrects\n"
   usage
   exit 1
 fi
