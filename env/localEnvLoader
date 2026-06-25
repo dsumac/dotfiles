@@ -1,31 +1,83 @@
 #!/bin/bash
 
 addLocalBinDirToPath() {
+  local LOCAL_BIN_DIR
   LOCAL_BIN_DIR=$DOTFILES_LOCAL/bin
-  if [ -d $LOCAL_BIN_DIR ]; then
-    echo -e "\nAdd local bin dir $LOCAL_BIN_DIR in \$PATH"
+  if [ -d "$LOCAL_BIN_DIR" ]; then
+    printf "\n[local-config] Added local bin to PATH: %s" "$LOCAL_BIN_DIR"
     export PATH=$LOCAL_BIN_DIR:$PATH
   fi
 }
 
-if [ -d "$DOTFILES_LOCAL" ];
-  then
-    echo -e "---------- Local config LOAD ----------"
-    
-    for f ($DOTFILES_LOCAL/zsh/*)
-    do
-      if [ -f "$f" ]; then
-        echo -e "\nSource zsh local file $f found"
-        source $f
-      fi
-    done
+getLocalConfigVariableNames() {
+  # Regex breakdown:
+  # ^[[:space:]]*                      -> allow leading spaces
+  # (export[[:space:]]+)?              -> optional "export " prefix
+  # ([A-Za-z_][A-Za-z0-9_]*)           -> capture variable name (group 2)
+  # =.*                                -> assignment operator and value
+  # Replacement "\2" prints only the captured variable name.
+  sed -nE 's/^[[:space:]]*(export[[:space:]]+)?([A-Za-z_][A-Za-z0-9_]*)=.*/\2/p' "$1"
+}
 
-    addLocalBinDirToPath
+printLocalConfigVariables() {
+  local LOCAL_CONFIG_FILE
+  local LOCAL_CONFIG_VARIABLE_NAMES
+  local LOCAL_CONFIG_VARIABLE_COUNT
+  local LOCAL_CONFIG_VARIABLE_NAME
+  local LOCAL_CONFIG_VARIABLE_IS_SET
+  local LOCAL_CONFIG_VARIABLE_VALUE
 
-    echo -e "---------- Local config LOADED ----------"
-  else
-    echo -e "---------- No local config found in $DOTFILES_LOCAL ----------"
+  LOCAL_CONFIG_FILE=$1
+  LOCAL_CONFIG_VARIABLE_NAMES=$(getLocalConfigVariableNames "$LOCAL_CONFIG_FILE")
+  LOCAL_CONFIG_VARIABLE_COUNT=$(printf "%s\n" "$LOCAL_CONFIG_VARIABLE_NAMES" | sed '/^[[:space:]]*$/d' | wc -l | tr -d ' ')
+
+  if [ -z "$LOCAL_CONFIG_VARIABLE_NAMES" ]; then
+    printf "\n  variables: none declared"
+    return
+  fi
+
+  printf "\n  variables loaded (%s):" "$LOCAL_CONFIG_VARIABLE_COUNT"
+
+  while IFS= read -r LOCAL_CONFIG_VARIABLE_NAME; do
+    [ -z "$LOCAL_CONFIG_VARIABLE_NAME" ] && continue
+
+    eval "LOCAL_CONFIG_VARIABLE_IS_SET=\${${LOCAL_CONFIG_VARIABLE_NAME}+x}"
+    if [ "$LOCAL_CONFIG_VARIABLE_IS_SET" = "x" ]; then
+      eval "LOCAL_CONFIG_VARIABLE_VALUE=\${$LOCAL_CONFIG_VARIABLE_NAME}"
+      printf "\n    - %s=%s" "$LOCAL_CONFIG_VARIABLE_NAME" "$LOCAL_CONFIG_VARIABLE_VALUE"
+    fi
+  done <<EOF
+$LOCAL_CONFIG_VARIABLE_NAMES
+EOF
+}
+
+if [ -d "$DOTFILES_LOCAL" ]; then
+  LOCAL_ZSH_FILE_FOUND=0
+  printf "---------- Local config loaded ----------"
+  printf "\n[local-config] root: %s" "$DOTFILES_LOCAL"
+
+  if [ -d "$DOTFILES_LOCAL/zsh" ]; then
+    while IFS= read -r f; do
+      [ -f "$f" ] || continue
+
+      LOCAL_ZSH_FILE_FOUND=1
+      printf "\n\n[local-config] sourcing: %s" "$f"
+      source "$f"
+      printLocalConfigVariables "$f"
+    done < <(find "$DOTFILES_LOCAL/zsh" -maxdepth 1 -type f | sort)
+  fi
+
+  if [ "$LOCAL_ZSH_FILE_FOUND" -eq 0 ]; then
+    printf "\n[local-config] no zsh local files found in %s" "$DOTFILES_LOCAL/zsh"
+  fi
+
+  addLocalBinDirToPath
+else
+  printf "---------- No local config loaded ----------"
+  printf "\n[local-config] missing directory: %s\n" "$DOTFILES_LOCAL"
 fi
 
-
+unset -f addLocalBinDirToPath
+unset -f getLocalConfigVariableNames
+unset -f printLocalConfigVariables
 
